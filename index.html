@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="js.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/altair-embed@v4.0.0/dist/altair-embed.js"></script>
+  <title>Guerra russo-ucraina</title>
+</head>
+
+<body>
+  <div id="spacer">
+    <h2> Uno sguardo attraverso i numeri </h2>
+  </div></body>
+
+  <div id="container_1">
+    <p>Il 24 febbraio 2022 iniziava la prima guerra simmetrica in Europa dopo la Seconda Guerra Mondiale: la <strong>guerra in Ucraina</strong>. Protagonista assoluta delle cronache nell’ultimo anno e mezzo, è uno dei grandi spartiacque della storia di questo secolo.
+    Ma questa è anche una guerra di mezzi e risorse oltre che di uomini. E molti ne stanno venendo usati in Ucraina vestendo un ruolo fondamentale e centrale.</p>
+  </div>
+  <img class="pic_1" src="fea-when-will-war-in-ukraine-end.jpg" alt="war">
+  <div id="container_2">
+    <p> Nel grafico sottostante si può constatare il computo, stimato tramite fotografie geolocalizzate nei luoghi di combattimento, del numero di mezzi leggeri e pesanti persi da russi e ucraini. </p>
+    <div id="chart"></div>
+  
+    <script>
+      var chartSpec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+        "config": {
+        "view": {
+        "continuousHeight": 300,
+        "continuousWidth": 400
+        }
+        },
+        "data": {
+        "name": "data-7e29c44ee02796e6f7a17feb00061ff4"
+        },
+        "datasets": {
+        "data-7e29c44ee02796e6f7a17feb00061ff4": [
+        {
+        "Paese": "Russia",
+        "Tipo": "AFV",
+        "losses_total": 773
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "APC",
+        "losses_total": 296
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Aerei",
+        "losses_total": 69
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Ambush",
+        "losses_total": 773
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Artiglieria Antiaerea Semovente",
+        "losses_total": 23
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Artiglieria Semovente",
+        "losses_total": 327
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Artiglieria Trainata",
+        "losses_total": 164
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Camion, veicoli e jeep",
+        "losses_total": 2256
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Carri Armati",
+        "losses_total": 1673
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Droni da Ricognizione",
+        "losses_total": 176
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Droni da combattimento",
+        "losses_total": 7
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Elicotteri",
+        "losses_total": 75
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "IFV",
+        "losses_total": 773
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Jammers",
+        "losses_total": 22
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Lanciamissili Anticarro Semoventi",
+        "losses_total": 37
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Lanciarazzi multipli",
+        "losses_total": 344
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Navi",
+        "losses_total": 12
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Posti di comando e stazioni di comunicazione",
+        "losses_total": 230
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Radar",
+        "losses_total": 23
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Sistemi Missilistici Terra-Aria",
+        "losses_total": 92
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "VEE",
+        "losses_total": 268
+        },
+        {
+        "Paese": "Russia",
+        "Tipo": "Veicoli di supporto artiglieria ed equipaggiamento",
+        "losses_total": 91
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "AFV",
+        "losses_total": 260
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "APC",
+        "losses_total": 223
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Aerei",
+        "losses_total": 57
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Ambush",
+        "losses_total": 41
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Artiglieria Antiaerea Semovente",
+        "losses_total": 4
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Artiglieria Semovente",
+        "losses_total": 110
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Artiglieria Trainata",
+        "losses_total": 100
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Camion, veicoli e jeep",
+        "losses_total": 513
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Carri Armati",
+        "losses_total": 457
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Droni da Ricognizione",
+        "losses_total": 58
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Droni da combattimento",
+        "losses_total": 15
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Elicotteri",
+        "losses_total": 29
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "IFV",
+        "losses_total": 471
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Jammers",
+        "losses_total": 1
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Lanciamissili Anticarro Semoventi",
+        "losses_total": 21
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Lanciarazzi multipli",
+        "losses_total": 72
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Navi",
+        "losses_total": 25
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Posti di comando e stazioni di comunicazione",
+        "losses_total": 9
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Radar",
+        "losses_total": 49
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Sistemi Missilistici Terra-Aria",
+        "losses_total": 87
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "VEE",
+        "losses_total": 43
+        },
+        {
+        "Paese": "Ucraina",
+        "Tipo": "Veicoli di supporto artiglieria ed equipaggiamento",
+        "losses_total": 22
+        }
+        ]
+        },
+        "encoding": {
+        "color": {
+        "field": "Paese",
+        "scale": {
+        "domain": [
+            "Russia",
+            "Ucraina"
+        ],
+        "range": [
+            "red",
+            "blue"
+        ]
+        },
+        "type": "nominal"
+        },
+        "opacity": {
+        "condition": {
+        "selection": "selector009",
+        "value": 1
+        },
+        "value": 0.2
+        },
+        "tooltip": [
+        {
+        "field": "Paese",
+        "title": "Paese",
+        "type": "nominal"
+        },
+        {
+        "aggregate": "sum",
+        "field": "losses_total",
+        "title": "Totale Perdite",
+        "type": "quantitative"
+        }
+        ],
+        "x": {
+        "aggregate": "sum",
+        "field": "losses_total",
+        "title": "Perdite Totali",
+        "type": "quantitative"
+        },
+        "y": {
+        "field": "Tipo",
+        "sort": {
+        "field": "losses_total",
+        "order": "ascending"
+        },
+        "title": "Tipologia",
+        "type": "nominal"
+        }
+        },
+        "height": 700,
+        "mark": "bar",
+        "selection": {
+        "selector009": {
+        "bind": "legend",
+        "fields": [
+        "Paese"
+        ],
+        "type": "single"
+        }
+        },
+        "width": 1000
+        }
+
+      vegaEmbed('#chart', chartSpec);
+    </script>
+
+    <div id="source-description">
+      <p>Fonte: Oryx</p>
+    </div>
+
+    <div id = "spacer_1">
+      <h2> I mezzi persi nel conflitto </h2>
+    </div>
+    <p>I dati che questo articolo si propone di analizzare e commentare si fermano al 22 maggio 2023, in corrispondenza con la fine della <strong>battaglia di Bakhmut</strong>, terminata dopo oltre 8 mesi con la vittoria russa.</p>
+    <p>Sia la <strong>Federazione Russa</strong> sia l’<strong>Ucraina</strong> sono ex membri dell’Unione Sovietica. Entrambe ne hanno ereditato parte dell’arsenale militare. Infatti i mezzi di fabbricazione sovietica costituiscono la maggior parte dei veicoli geolocalizzati da osservatori indipendenti, perduti da entrambe le fazioni. A questi si aggiungono, rispettivamente, i mezzi di fabbricazione russa post-sovietici e quelli occidentali forniti dai loro sostenitori agli ucraini durante il conflitto. </p>
+
+    <p>Il numero totale di <strong>mezzi persi dai russi</strong> rispetto agli ucraini si avvicina ad un <strong>rateo di 3 a 1</strong>, a comprova di una performance dell’esercito russo nettamente al di sotto di quanto il mondo si sarebbe aspettato..</p>
+
+    <p>Il numero di <strong>mezzi occidentali</strong> dati agli ucraini sono quelli più interessanti da valutare per quanto riguarda questo schieramento, poiché costituiscono le uniche unità di mezzi rimpiazzabili, anche se la loro fornitura avviene in numeri relativamente piccoli e abbastanza a rilento. A partire dalla primavera 2022, il numero di mezzi occidentali persi ammonta a  <strong>2912 unità</strong>. Le perdite di questo equipaggiamento si concentrano perlopiù in mezzi leggeri, un tipo di perdita normale in un contesto di guerra. Raggiungono, tuttavia, numeri impressionanti alcune voci dell’equipaggiamento pesante, in particolare le artiglierie pesanti da 155 mm M777 di fabbricazione americana, che hanno avuto un totale di perdite pari a ben 157 unità a fronte delle circa 300 fornite. Ciò sta a significare una scarsa efficacia o un utilizzo strategico non adeguato da parte di Kiev. </p>
+
+    <p>Ma è l’<strong>aviazione</strong> che, secondo i dati raccolti, costituisce il vero tallone d’Achille per gli ucraini. Infatti, essi hanno perso ben <strong>26 MiG-29</strong>, ovvero i caccia più moderni in dotazione, di fabbricazione sovietica, su 80 stimati nei numeri anteguerra. Anche se potrebbe sembrare un numero di perdite non troppo elevato a un primo sguardo, sostituire un caccia perso nelle operazioni militari costituisce al momento, per via della complessità del mezzo rispetto ad altri come carri armati e artiglierie, un tipo di perdita impossibile da rimpiazzare per gli ucraini. Pertanto, essendo i caccia elementi fondamentali per la conduzione con successo di nuove offensive, essi saranno, una volta sciolti i complicati nodi politici ad essi relativi, il punto di maggior sforzo occidentale nelle forniture.</p>
+
+    <p><strong>L’aviazione russa</strong>, per contro, è una delle voci con le perdite minori rispetto alle disponibilità russe di anteguerra. Le maggiori perdite si sono avute in particolare in termini di <strong>elicotteri</strong>, specie all’inizio delle operazioni militari, cosa che ha spinto i russi ad utilizzare con cautela i loro elicotteri e caccia.</p>
+
+    <p>L’esito di questa guerra è ancora lontano dall’essere deciso, ma solo stimando che il 50% degli equipaggi di questi mezzi distrutti sia caduto, arriveremmo in termini matematici e con una stima ancora ottimistica per la verità, alla cifra impressionante di almeno 40000 morti. Numero purtroppo destinato solamente a salire.</p>
+  </div>
+
+    <img class = "pic_2" src = "2022-03-31T164608Z_1832066083_RC2ODT9HGBV0_RTRMADP_3_UKRAINE-CRISIS-BORDER-scaled-e1650466686916.jpg" alt = "refugees">
+
+  <div id = "container_3">
+
+    <div id = "spacer_2">
+      <h2> La crisi umanitaria dei migranti </h2>
+    </div>
+    <p> La guerra mostra la sua tragica faccia anche nelle sofferenze della popolazione civile. È ormai da febbraio 2022 che le sirene antiaeree risuonano nelle città ucraine senza sosta, portando con sé un senso di paura e di imminente pericolo. È da febbraio 2022 che la partenza degli uomini verso il fronte ha scoinvolto le dinamiche famigliari, spazzando via la normale quotidianità. A combattere, e quindi a morire, sono soprattutto loro: padri e figli.</p>
+      
+    <p>Donne, bambini ed anziani invece fanno parte di quella grande onda umana che ha attraversato l’Europa in cerca di rifugio e protezione. Un flusso migratorio di proporzioni straordinarie, senza precedenti dalla fine della Seconda Guerra Mondiale in Europa, che ha avuto un impatto significativo specialmente sui paesi dell’Europa dell’Est.</p>
+    
+    <img class = "pic_3" src = "grafico_rifugiati.png" alt = "grafico rifugiati">
+
+    <div id = "source-description2">
+      <p> Fonte: UNHCR </p>
+    </div>
+
+    <p>I dati riportati dall’<strong>UNHCR</strong> (Alto Commissariato delle Nazioni Unite per i rifugiati) mettono ben in evidenza le dimensioni di questo evento: circa <strong>20 milioni</strong> di ucraini hanno attraverso i confini di paesi come Polonia, Ungheria, Moldavia, Romania o Slovacchia, molto spesso come meta transitoria nel loro percorso verso l’Europa occidentale. Numeri considerevoli, certo, ma non sorprendenti dal punto di vista geopolitico. Parliamo infatti di paesi che hanno stretti legami e una relativa vicinanza con l’Ucraina.</p>
+
+    <p>Quello che balza all’occhio, se contestualizzati, sono invece i numeri che riguardano i rifugiati verso la <strong>Russia</strong>. Come mai, vista l’escalation in atto e le relazioni a dir poco tese (per usare un eufemismo) tra i due paesi, quasi tre milioni di ucraini avrebbero scelto di varcare il confine russo? Prima di andare ad analizzare più nel dettaglio la situazione, è importante precisare che le informazioni riguardanti la Russia si riferiscono a dati disponibili fino al 31 dicembre 2022, poiché non sono stati forniti ulteriori aggiornamenti. Ma ciò non toglie la rilevanza del fenomeno.</p> 
+     
+    <p>In un recente <a href = "https://d21zrvtkxtd6ae.cloudfront.net/public/uploads/2022/11/EUR5061362022ENGLISH.pdf" target = "_blank">rapporto</a> pubblicato da <strong>Amnesty International</strong>, le accuse alle autorità russe sono gravi e indicano la presenza di crimini di guerra e possibili crimini contro l’umanità nella guerra in corso in Ucraina. Nel rapporto viene messo in luce il fatto che le forze russe abbiano trasferito civili in maniera coatta dalle zone occupate dell’Ucraina verso la Russia o verso territori ucraini sotto il controllo russo. Inoltre, Amnesty International denuncia la separazione di minori dalle loro famiglie e durante queste operazioni: una <strong>grave violazione del diritto internazionale umanitario. </strong></p>
+  
+    <p>All’inizio di marzo 2022, <strong>Mariupol</strong> è stata presa di mira dalle forze russe, diventando una tragica zona di assedio. I bombardamenti incessanti hanno lasciato la città senza acqua, riscaldamento ed elettricità, costringendo i residenti a vivere in condizioni disumane e insostenibili. Dopo giorni di intensi sforzi, alcune migliaia di civili sono finalmente riusciti a fuggire da Mariupol, cercando rifugio nelle zone controllate dal governo. Tuttavia, la fuga si è rivelata ancora più ardua, poiché le forze russe hanno iniziato a costringere alcune persone a rimanere in città, tagliando ogni possibile via di fuga. Molti si sono trovati intrappolati, privati della libertà di scegliere il proprio destino, e costretti ad accettare una difficile decisione: trasferirsi contro la loro volontà nella Repubblica Popolare di Donetsk (RpD) o cercare rifugio in Russia.</p>
+    
+    <p>Insomma, una maggiore consapevolezza riguardo alla crisi in Ucraina e alle sue conseguenze umanitarie può aiutare a mobilitare ulteriore supporto e solidarietà verso chi sta vivendo una situazione così difficile. Non solo semplici numeri, ma soprattutto persone. </p>
+  </div> 
+</body>
+
+<footer>
+  Progetto realizzato da Salvatore Ergoli e Pietro Lampani per il corso di Data Journalism 
+</footer>
+
+</html>
